@@ -1,0 +1,131 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <!-- jquery -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
+
+  <!-- icon cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    *{
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+
+            list-style: none;}
+
+
+    .floating-menu {
+      position: absolute;
+      right: 10px;
+      top: 300px;
+    }
+
+    .floating-menu i {
+      cursor: pointer;
+    }
+    #wrap {  display: flex;
+      justify-content: center;
+      position: relative;
+
+      list-style: none;
+    }
+
+    #newpage { 
+      width: 500px;
+      height: 700px;
+      border: solid black 1px;
+     
+      background-image: url("image/my1 (1).jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      margin: 0 auto;
+    }
+    #life {
+      width: 500px;
+      height: 700px; 
+      border: solid black 1px;
+
+      margin: 0 auto;
+
+      background-image: url("image/my1 (2).jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    #hobby { 
+      width: 500px;
+      height: 700px;
+      border: solid black 1px;
+      
+
+      margin: 0 auto;
+
+      background-image: url("image/my1 (3).jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      
+    } 
+  </style>
+  <script type="text/javascript">
+    window.onload = () => {
+      // 기본 위치(top)값 설정
+      const innerHeight = window.innerHeight - 30;
+
+      const $floatMenu = $(".floating-menu");
+      $floatMenu.css("top", innerHeight + "px");
+      const floatPosition = parseInt($floatMenu.css("top"));
+
+      // scroll 인식
+      $(window).scroll(function() {
+
+        // 현재 스크롤 위치
+        const currentTop = $(window).scrollTop();
+        const bannerTop = currentTop + floatPosition + "px";
+
+        //이동 애니메이션
+        $(".floating-menu").stop().animate({
+          "top" : bannerTop
+        }, 500);
+
+      }).scroll();
+    }
+  </script>
+  <title>Title</title>
+</head>
+<body>
+  <div class="floating-menu" style="top: 889px;"> 
+    <i class="fa-solid fa-circle-arrow-up fa-2xl" onclick="window.scrollTo(0, 0);"></i>
+  </div>
+<div id="wrap">
+  <div id="newPage">
+    <a href="newpage/newpage1.html">자기소개</a>
+      <ul id="me">
+        <li>이름</li>
+        <li>나이</li>
+        <li>학력</li>
+        <li>경력</li>
+      </ul>
+  </div><br>
+  <div id="life">
+    <a href="newpage/newpage2.html">성장과정</a>
+      <ul id="up">
+        <li>운동선수</li>
+        <li>미용사</li>
+        <li>미용강사</li>
+        <li>마케터</li>
+      </ul><br>
+  </div><div id="hobby">
+    <a href="newpage/newpage3.html">취미생활</a>
+      <ul id="good">
+        <li> 인스타그램 패션계정</li>
+        <li> 전시회 </li>
+        
+      </ul>
+  </div>
+</div>
+
+</body></html>

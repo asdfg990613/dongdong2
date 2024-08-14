@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{ 
+        margin: 0px; padding: 0px;
+        font-size: 12px;
+       }
+
+       .rsc{
+        width: 200px;
+        height: 200px;
+        background: blue;
+       }
+
+       #warp { 
+        width: 1024px;
+        height: 700px;
+        margin: 0 auto;
+       }
+
+       #warp > div:nth-child(1){
+        position: relative;
+        height: 260px;
+       }
+
+       #warp > div:nth-child(1) div#top-left-box{
+        position: relative;
+        left: 0; top: 0;
+       }
+       #warp > div:nth-child(1) div#top-right-box{
+        position: relative;
+        right: 0; top: 0;
+       }
+
+       #center{
+        display: block;
+        margin: 0 auto;
+       }
+    </style>
+</head>
+<body>
+    <div id="warp">
+        <div>
+            <div id="top-left-box" class="rsc"></div>
+            <div id="top-right-box" class="rsc"></div>
+        </div>
+        <div>
+            <div id="center" class="rec"></div>
+        </div>
+</body>
+</html>

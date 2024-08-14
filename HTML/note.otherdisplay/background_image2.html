@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 160px;
+            height: 260px;
+        }
+        .IMAGE  {
+            width: 160px;
+            height: 260px;
+
+            background-color: black;
+
+            float: left;
+            margin-right: 5px;
+        }
+        div#box {
+            overflow: hidden;
+        }
+
+        div#box > div.IMAGE:nth-child(1)
+        {  background-color: red; }        
+        div#box > div.IMAGE:nth-child(2)
+        { background-color: blue; }        
+        div#box > div.IMAGE:nth-child(3)
+        { background-color: green;}        
+    </style>
+</head>
+<body>
+    <img src="1.jpg">
+    <img src="2.jpg">
+    <img src="3.jpg">
+    <hr/>
+    <div id="box">
+        <div class="IMAGE"> </div>
+        <div class="IMAGE"> </div>
+        <div class="IMAGE"> </div>
+    </div>
+    <hr/>
+    <div id="boxss">
+        <div class="IMAGE"> </div>
+        <div class="IMAGE"> </div>
+        <div class="IMAGE"> </div>
+    </div>
+ 
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+      
+        *{
+          font-size: 12px;
+          margin: 0;
+          padding: 0;
+  
+          list-style: none;
+      }
+      
+         #wrap {
+          width: 800px;
+          height: 100vh;
+          margin: 0 auto;
+          background: #eee;
+
+        overflow: hidden;
+      }
+          #header {
+              width: 100%;
+              height: 150px;
+  
+              background: #aaa;
+  
+              position: relative;
+              
+          }
+  
+          #header ul#nav {
+              width: 100%;
+              height: 40px;
+  
+              position: absolute;
+              left: 0; bottom: 0;
+              
+              overflow: hidden;
+          }
+  
+          #header ul#nav >li{
+              width: 25%;
+  
+              float: left;
+  
+              text-align: center;
+              line-height: 40px;
+  
+              font-size: 1.5em;
+              font-weight: bold;
+              }
+  
+          #header ul#top_banner{
+              width: 240px;
+  
+              margin-right: 5px;
+              margin-top: 5px;
+  
+              position:absolute;
+              right: 0; top: 0;
+  
+              overflow: hidden;
+          }
+  
+          #header ul#top_banner >li{
+              margin-left: 5px;
+              float: left;
+          }
+  
+          #header ul#top_banner > li:first-child{
+          
+              margin-left: 50px;
+          }
+    
+          #content {
+            width: 100%;
+
+            height: 800px;
+
+            background: #e68383a9;
+          }
+
+            #content div#content-body{
+                width: 80px;
+                height: 600px;
+
+                background: #c7e683a9;
+
+                overflow: hidden;
+            }
+
+            #content div#content-footer {
+                width: 100%;
+                height: 200px;
+
+                background: #83a2e6a9;
+            }
+
+            #content div#content-body div#aside {
+                width: 75%;
+                height: 100%;
+
+                background: #df83e6a9;
+            }
+            #content div#content-body div#section {
+                width: 25%;
+                height: 100%;
+
+                float: left;
+
+                background: #83cce6a9;
+
+                overflow: hidden;
+            }
+
+            #content div#content-body div#aside ul#side-menu {
+                width: 70%;
+                margin: 0 auto;
+
+                background: #e59744a9;
+            }
+            #content div#content-body div#aside ul#side-menu > li {
+                width: 100%;
+                height: 30px;
+
+                text-align: center;
+                line-height: 30px;
+                
+                font-size: 16px;
+                font-family: 400;
+
+                border-bottom: 1px solid #f9f;    
+            }
+            
+            #content div#content-body div#aside ul#side-menu > li:hover {
+
+                background-color: #FFF;
+                font-weight: 600;
+                cursor: pointer;
+            }
+
+            #content div#content-body div#section > div {
+                width: 50%;
+                float: left;
+                height: 100%;
+
+                background: rgb(250, 255, 119);
+            }
+
+
+            </style>
+</head>
+<div>
+    <div id="wrap">
+            <div id="header">
+                <ul id="nav">
+                    <li>home</li>
+                    <li>회사소개</li>
+                    <li>포트폴리오</li>
+                    <li>채용</li>
+                </ul>
+                <ul id="top_banner">
+                    <li>로그인 I</li>
+                    <li>회원가입 I</li>
+                    <li>비밀번호 I</li>
+                </ul>
+            </div>
+            <div id="content">
+                <div id="content-BODY">
+                    <div id="aside">
+                        <ul id="SIDE-MENU">
+                            <li>회원목록</li>  
+                            <li>회원등록</li>                    
+                            <li>회원수정</li>                    
+                            <li>회원삭제</li>                                      
+                        </ul>
+                </div>
+                <div id="section">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <DIV id="CONTENT-FOOTER"></DIV>
+        </div>
+    </div>
+ </div>
+
+</body>
+</html>
